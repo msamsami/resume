@@ -1,0 +1,208 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The template of this CV is created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com)
+
+% -----------------------------------------
+
+% AltaCV uses the fontawesome and academicon fonts and packages.
+% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+% You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle.
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,ragged2e]{altacv}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage[super]{nth}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+}
+
+\geometry{left=1.25cm,right=9.65cm,marginparwidth=7.6cm,marginparsep=1cm,top=1.25cm,bottom=1.25cm}
+
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% %% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\name{M. Mehdi Samsami}
+\tagline{Data Scientist, Rigid Robotics Inc.}
+
+%\photo{3.2cm}{profile.jpg}
+
+\personalinfo{
+  % You can add your own with \printinfo{symbol}{detail}
+    \vspace{3mm}
+    \mailaddress{mehdisamsami@live.com}
+    \phone{+98 921 590 2394}
+%    \mailaddress{Rajaei Blvd, Shiraz, Iran}
+    \location{Shiraz, Iran} \\
+    \vspace{1.5mm}
+    \linkedin{\href{https://linkedin.com/in/msamsami}{LinkedIn}} \hspace{23.5mm}
+%    \homepage{msamsami.ece.iut.ac.ir}
+    \github{\href{https://github.com/msamsami}{GitHub}}
+}
+
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+\vspace{3mm}
+
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\cvsection[page1sidebar]{Work Experience}
+
+\cvevent{Data Scientist~\small{(Full-Time)}}{\href{https://rigidrobotics.com}{Rigid Robotics Inc.}}{Dec 2021---Present}{Vancouver, Canada (Remote)}
+\begin{itemize}\setlength\itemsep{0.55em}
+\item Performed physical- and signal-based feature extraction and engineering on movement and location data of mining shovels
+\item Performed clustering on mining shovels' movements data using spectral clustering and VAEs
+\item Used historical features (e.g., tumbling, lag, and rolling) to improve model accuracy and reduce post-processing overhead
+\item Designed and developed ensemble classifiers to predict the degree of hardness of shovels' digging operations
+\item Applied analytical methods for model calibration
+\item Developed a Python library of utility and project-specific modules required for Rigid Robotics' data applications
+\item Proposed context-relevant performance metrics to stakeholders and clients
+\item Developed end-to-end ETL and prediction pipelines for data and machine learning operations (MLOps)
+\item Wrote unit tests and integration tests for data pipelines 
+\item Managed machine learning life cycle and deployed several data pipelines to Azure cloud
+\item Developed a multi-environment infrastructure as code (IaC) project based on Pulumi for cloud applications
+\end{itemize}
+ 
+\divider
+\vspace{1.5mm}
+
+\cvevent{Data Scientist~\small{(Full-Time)}}{\href{https://techclass.com/}{TechClass Ltd.}}{May 2020---Dec 2021}{Helsinki, Finland (Remote)}
+\begin{itemize}\setlength\itemsep{0.55em}
+\item Analyzed KPIs and trends in the enrollments of online courses and students' behaviours
+\item Developed and deployed a text-to-speech API for online course content narration
+\item Developed a Bayesian classifier for student dropout prediction using historical, behavioural data
+\item Developed a similarity-based question-answering chat bot
+\item Established TechClass AI Department offering several courses on AI and data science
+\end{itemize}
+ 
+% \divider
+
+% \cvevent{AI and Image Processing Developer}{Self-employed}{Jan 2019---May 2020}{Isfahan, Iran}
+% Projects:\smallskip
+% \begin{itemize}\setlength\itemsep{0.55em}
+% \item "\textit{Matching tooth colors with color standards of the dental shade guides using machine learning and image processing}"\\ Employer: \href{http://idi-co.com/index.php/en/}{Iran Dental Industries}
+% \item "\textit{Analysis and modeling of  Isfahan resilience indicators against the crisis using data mining and machine learning}"\\ Employer: \href{https://isfahan.ir/}{Isfahan Municipality}
+% \item "\textit{Driver's seat belt detection in traffic surveillance images}"\\ Employer: Transportation and Traffic Research Center, Shiraz University
+% \end{itemize}
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\cvsection[page2sidebar]{Education}
+
+\cvevent{MSc in Electrical Engineering–Communication Systems}{\href{https://english.iut.ac.ir/}{Isfahan University of Technology (IUT)}}{Sep 2018---Sep 2021}{}
+
+GPA: \textbf{19.22}/20 (First Class Honours) \vspace{1.5mm}
+
+Thesis: "\textit{Detection of P300 Component based on Statistical Analysis of the Event-related Potentials with Application to Character Spellers}" \\
+
+\divider
+
+\cvevent{BSc in Electrical Engineering}{\href{https://shirazu.ac.ir/en/home}{Shiraz University}}{Sep 2013---Feb 2018}{}
+
+Last two years GPA: \textbf{17.67}/20 (top 10\%) \vspace{1.5mm}
+
+Thesis: "\textit{Classification of the Air Quality Level based on Analysis of the Sky Images}"
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION
+%----------------------------------------------------------------------------------------
+
+\vspace{4mm}
+\cvsection{Publications}
+F. Eftekhari and \textbf{M. M. Samsami}, ``\href{http://dx.doi.org/10.21125/inted.2021.1884}{The Future of Learning Environments with Artificial Intelligence and Machine Learning},"  in Proceedings of \textit{15th International Technology, Education and Development Conference}, Online Conference, Mar 2021, pp.~9015--9024.
+% DOI: 10.1007/s11276-020-02466-1.
+
+\divider
+
+\textbf{M. M. Samsami} and N. Yasrebi, ``\href{https://link.springer.com/article/10.1007/s11276-020-02466-1}{Novel RFID anti-collision algorithm based on the Monte–Carlo query tree search}," \textit{Wireless Networks}, vol. 27, no. 1, pp.~621--634, 2020.
+% DOI: 10.1007/s11276-020-02466-1.
+
+\divider
+
+\textbf{M. M. Samsami}, N. Shojaie, S. Savar, and M. Yazdi, ``\href{https://doi.org/10.1109/IranianCEE.2019.8786738}{Classification of the Air Quality Level based on Analysis of the Sky Images}," in Proceedings of \textit{27th Iranian Conference on Electrical Engineering (ICEE)}, Yazd, Iran, Apr 2019, pp.~1492--1497.
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEER ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+\vspace{4mm}
+\cvsection{Volunteer Activities}
+\begin{itemize}
+\item Chairman of IEEE IUT Student Branch \hfill2019---2020
+\smallskip
+\item Member of IEEE IUT Student Branch \hfill2018---2019
+\smallskip
+\item Member of IEEE Shiraz Student Branch \hfill2016---2018
+\smallskip
+\item Member of Shiraz University Art Association \hfill2016---2017
+\end{itemize}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% % \addnextpagesidebar[-1ex]{page3sidebar}
+
+\end{document}
